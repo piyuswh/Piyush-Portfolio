@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+background: radial-gradient(circle at top left, #041423 20%, #000000 85%);
+  color: white;
+  font-family: Palatino Linotype, serif;
+  overflow-x: hidden;
+}
+#page1, #page2, #page3 {
+  height: 100vh;
+  width: 100%;
+  background: transparent;
+
+}
+#download{
+  font-size: 2vw;
+  background-color: #00f5a0;
+  /* opacity: 50%; */
+  color: black;
+  font-style:normal;
+  font-weight: 700;
+  height:3vw;
+  text-align: center;
+  width: 15vw;
+  border-radius: 15px;
+  white-space: nowrap;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 00;
+  box-shadow: 2px 2px 10px #00f5a0;
+  margin-top: 2%;
+}
+
+#page2{
+  display: flex;
+
+}
+#profile h1{
+  font-size: 3vw;
+}
+#left-div2{
+  width:60%;
+  /* border: 2px solid red; */
+}
+#right-div2{
+  width: 40%;
+  /* border: 2px solid black; */
+}
+#profile #name{
+  font-size: 3vw;
+  border-bottom: 2px solid white;
+  box-shadow: 0 5px 5px -5px white;  width: 20%;
+  /* border-radius: 20%; */
+}
+#profile #desig{
+  font-size: 3vw;
+  white-space: nowrap;;
+    box-shadow: 0 8px 5px -5px white;  width: 80%;
+
+}
+#foot{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  border:2px solid white;
+}
+#page1{
+  display: flex;
+}
+#left-div{
+  /* background-color: aqua; */
+  width: 50%;
+}
+#right-div{
+  width: 50%;
+  /* background-color: aquamarine; */
+}
+
+#profile{
+  margin-top:3% ;
+  padding:0 15%;
+}
+#info #menu{
+  display: none;
+}
+#content{
+  display: flex;
+  font-size:1vw;
+  border-bottom: 2px solid white;
+  justify-content: space-between;
+  align-content: center;
+  /* margin:1% 3%; */
+  padding: 10px 5%;
+  /* border: 2px solid white; */
+  /* width: 100%; */
+
+}
+#img{
+  border: 2px solid wheat;
+  height: 40%;
+  width: 40%;
+  border-radius: 50%;
+  margin: 7% 20%;
+  box-shadow: 2px 2px 20px white;
+}
+#img2 img{
+  width: 70%;
+  height: 70%;
+  padding-left: 20%;
+}
+#right-content{
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  padding-left: 18%;
+}
+#right-content h1{
+  padding-top: 8%;
+  font-size: 3vw;
+}
+#right-content h2{
+  /* padding-left:5%; */
+  font-size: 2vw;
+}
+#fonts{
+  color: #00f5a0;
+}
+#rhead h1{
+  background: linear-gradient(90deg, #00f5a0, #00d9ff);
+-webkit-background-clip: text;
+color: transparent;
+
+
+}
+#page3{
+  display: flex;
+}
+#left-div3{
+  width: 50%;
+  height: 100%;
+background-color: aqua;
+}
+#right-div3{
+  width: 50%;
+  height: 100%;
+  background-color: #00f5a0;
+
+}
+#profile{
+  border-radius: 50%;
+}
+#profile img{
+  padding-top: 6%;
+  width: 100%;
+  height: 60%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+#info{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 60px;
+  font-size: 1.6vw;
+  padding:1.4% 1%;
+}
+ #about{
+  /* padding-top: 2%; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* color: #0072ff;  */
+}
+#left-div2{
+ height: 80%; 
+}
+#right-div2{
+  height: 80%;
+}
+#profile h1{
+  text-align: center;
+}
+
+#about p {
+  padding: 1px 15px;
+  font-size: 1.5rem; /* comfortable default size */
+  line-height: 1.8;  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#about h1{
+  font-size: 3vw;
+}
+@media (max-width:600px) {
+  /* #page1 #left-div,
+#page1 #right-div,
+#right-content {
+    width: 100%;
+    padding-left: 0;
+} */
+html,body{
+  overflow-x: hidden;
+}
+  
+  #page1{
+    flex-direction: column;
+    gap:10%;
+    overflow-x:hidden;
+  }
+  #page1 #left-div{
+    padding-top:12%;
+width: 100%;
+/* padding-left: 15%; */
+  }
+  #page1 #right-div{
+    width: 100%;
+    align-self: center;
+  }
+  #page1 #right-div h1{
+    white-space:normal;
+    font-size: 10vw;
+  }
+  
+  #page1 #right-div h2{
+    font-size: 5vw;
+  }
+
+     #img {
+        border: 2px solid wheat;
+        /* height: 40%; */
+        height: 188%;
+        width: 61%;
+        margin: 0 auto;
+        border-radius: 50%;
+        display: block;
+        /* margin: 7% 11%; */
+    }
+
+#right-content {
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
+padding-top: 20%;
+    flex-direction: column;
+    /* padding-top: 10%; */
+    padding-bottom: 40%;
+}
+  #right-content h2 {
+    padding-left: 5%;
+    font-size: 3vw;
+}
+
+#right-content h1 {
+    padding-top: 8%;
+    font-size: 6vw;
+}
+   #info #menu {
+      display:block;
+    }
+  #content{
+    font-size: 3vw;
+  }
+  #info > *:not(#menu){
+    display: none;
+  }
+  
+  #page2 #right-div2{
+    width: 60%;
+    height: 50%;
+  }
+
+
+  
+}
