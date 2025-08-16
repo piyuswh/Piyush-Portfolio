@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite --host",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

@@ -1,6 +1,87 @@
 import React from 'react'
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// register both
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const App = () => {
+  useGSAP(()=>{
+        gsap.from("#skils", {
+      scale:0,
+      opacity: 0,
+      duration:0.8,
+      scrollTrigger: {
+        trigger: "#skils img",   // element that triggers animation
+        start: "top 100%",  // when top of box hits 80% of viewport
+        end: "bottom 60%", // optional
+        scrub: true,       // smooth scroll-linked animation
+        markers: true      // shows markers for debugging
+      }
+    });
+    
+        gsap.from("#logo", {
+          y:200,
+      opacity: 0,
+      duration:0.8,
+      scrollTrigger: {
+        trigger: "#logo h2",   // element that triggers animation
+        start: "top 100%",  // when top of box hits 80% of viewport
+        end: "bottom 60%", // optional
+        markers: true   ,
+      }
+    });
+         // Project 1: slide from left
+  gsap.from("#project1", {
+    x: -200,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: "#project1",
+      start: "top 80%",
+      end: "bottom 60%",
+      toggleActions: "play none none reverse",
+      markers: true, // remove in production
+    },
+  });
+
+  // Project 2: slide from right
+  gsap.from("#project2", {
+    x: 200,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: "#project2",
+      start: "top 30%",
+      end: "bottom 60%",
+      toggleActions: "play none none reverse",
+      markers: true,
+    },
+  });
+    
+  
+    var tl=gsap.timeline()
+    tl.from("#content h1",{
+      y:-200,
+      opacity:0,
+      duration:1.45,
+      delay:0.2,
+      stagger:0.2
+    })
+    tl.from("#left-div #img",{
+      opacity:0,
+      duration:1.1,
+      x:-700,
+      rotate:360
+    })
+    gsap.from("#skils",{
+      opacity:0,
+      duration:1,
+      scale:0
+    })
+  })
+  
   return (
     <div id="body">
       <nav>
@@ -10,7 +91,7 @@ const App = () => {
             <h1><a href='#page4'>Projects</a></h1>
             <h1><a href='#page3'>Skills</a></h1>
             <h1><a href="#page2">About Me</a></h1>
-            <h1><a href="">Contact Me</a></h1>
+            <h1><a href="#page5">Contact Me</a></h1>
              <h1 id="menu">☰</h1>
           </div>
 
@@ -22,7 +103,7 @@ const App = () => {
             <img src="" alt="" /> </div>
 
         <div id='profile'>
-        <h1 id='name'>XyZ</h1>
+        <h1 id='name'>Piyush</h1>
         <h1 id='desig'>Software Developer</h1>
            </div>
         </div>
@@ -45,14 +126,19 @@ const App = () => {
           <div id='about'>
             <h1>About Me</h1>
             <p>
-              Hi, <span id='fonts'>I’m Piyush Saxena</span>, a passionate <span id="fonts">MERN Stack Developer and Java</span> enthusiast who loves transforming ideas into interactive, high-performance web applications. I specialize in building complete solutions — from sleek, responsive frontends to scalable, secure backends.
-
-With a strong command of <span id='fonts'>MongoDB, Express.js, React, Node.js, and Java</span>, I focus on writing clean, efficient code and crafting user-friendly experiences. I enjoy blending functionality with design to create websites that not only work flawlessly but also feel great to use.
-
-When I’m not coding, you’ll find me exploring the latest tech trends, refining my projects, or challenging myself with programming problems. My goal is simple — to keep learning, keep building, and contribute to projects that make a real difference.
-            </p>
+  Hi, <span id='fonts'>I’m Piyush Saxena</span>, a passionate <span id="fonts">MERN Stack Developer</span> and Java enthusiast.  
+  I love turning ideas into interactive, high-performance web applications with clean code and user-friendly design.  
+  Skilled in <span id='fonts'>MongoDB, Express.js, React, Node.js, and Java</span>, I focus on building responsive frontends and scalable backends.  
+  Always curious and eager to learn, I enjoy exploring new technologies and refining my craft to create projects that make an impact.  
+</p>
             <a id="download">Get Resume</a>
           </div>
+<div id='logo'>
+  <h2><a href=""><i className="ri-linkedin-fill"></i></a></h2>
+  <h2><a href=""><i className="ri-twitter-x-line"></i></a></h2>
+  <h2><a href=""><i className="ri-github-fill"></i></a></h2>
+  <h2><a href=""><i className="ri-linkedin-fill"></i></a></h2>
+</div>
 
         </div>
         <div id='right-div2'>
@@ -66,6 +152,7 @@ When I’m not coding, you’ll find me exploring the latest tech trends, refini
           
         </div>
       </div>
+    
       <div id='page3'>
         <div id='left-div3'>
             <h1>Skills</h1>
@@ -98,14 +185,11 @@ When I’m not coding, you’ll find me exploring the latest tech trends, refini
             </div>
             <div id='desc'>
               <h2>Description</h2>
-              <p>Weatherify is a weather forecasting web application that provides real-time weather updates for any location worldwide. Powered by the OpenWeatherMap API, it displays detailed metrics such as temperature, humidity, wind speed, and weather conditions, with dynamic background changes based on the forecast.</p>
+              <p>Weatherify – A weather app that provides real-time global forecasts using the OpenWeatherMap API, showing temperature, humidity, wind speed, and dynamic backgrounds based on conditions.</p>
               <h2>Features</h2>
               <div id='features'>
-
               <li>Real-time weather data using REST API integration</li>
               <li>Search by city name or geolocation</li>
-              <li>Temperature, humidity, wind speed, and condition display</li>
-              <li>Dynamic UI changes based on weather conditions</li>
               </div>
               <h2>Tech Stack:React, API Integration</h2>
             </div>
@@ -124,17 +208,15 @@ When I’m not coding, you’ll find me exploring the latest tech trends, refini
             </div>
 <div id='desc'>
               <h2>Description</h2>
-              <p>CodeZone is an interactive online coding platform built using the MERN stack, designed for developers to practice, run, and share code in real-time. It supports multiple programming languages and offers a user-friendly, modern interface with smooth animations.</p>
+                <p>CodeZone – An interactive MERN-based coding platform to practice, run, and share code in real time, with multi-language support and a modern, animated UI.</p>
               <h2>Features</h2>
               <div id='features'>
-
-              <li>Multi-language code editor with syntax highlighting</li>
               <li>Real-time code compilation and output display</li>
               <li>Secure backend with Express and MongoDB</li>
               <li>User authentication & profile management</li>
               </div>
-              <h2>Tech Stack:
-MongoDB, Express.js, React.js, Node.js, Tailwind CSS, GSAP Animations</h2>
+              <h2>Tech Stack: MERN, Tailwind CSS, GSAP
+</h2>
             </div>
             <div id='btn-c'>
             <a>Demo</a>
@@ -145,6 +227,26 @@ MongoDB, Express.js, React.js, Node.js, Tailwind CSS, GSAP Animations</h2>
           </div>
         </div>
       </div>
+      <div id="page5">
+        <h1>Contact Me</h1>
+        <div id='Contact'>
+          <div id='form'>
+            <form action="">
+              <input type="email" placeholder='Enter Your Email Here...'/>
+              <textarea name="" id="" placeholder='Enter Your Message Here..'></textarea>
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id='socials'>
+        <h1><i className="ri-github-fill"></i><a href="">Github</a></h1>
+        <h1><i className="ri-twitter-x-line"></i><a href="">Twitter</a></h1>
+          
+        <h1><i className="ri-linkedin-fill"></i><a href="">LinkedIn</a></h1>
+        </div>
+      </footer>
       
     </div>
   )
