@@ -8,57 +8,66 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const App = () => {
   useGSAP(()=>{
-        gsap.from("#skils", {
-      scale:0,
-      opacity: 0,
-      duration:0.8,
-      scrollTrigger: {
-        trigger: "#skils img",   // element that triggers animation
-        start: "top 100%",  // when top of box hits 80% of viewport
-        end: "bottom 60%", // optional
-        scrub: true,       // smooth scroll-linked animation
-        markers: true      // shows markers for debugging
-      }
-    });
+        gsap.from("#skils img", {
+  y: 50,           
+  opacity: 0,       
+  duration: 1,      
+  ease: "power2.out",
+  stagger: 0.2,     
+  scrollTrigger: {
+    trigger: "#skils img",
+    start: "top 80%",
+    end: "bottom 60%",
+    toggleActions: "play none none reverse", 
+  }
+});
     
         gsap.from("#logo", {
           y:200,
       opacity: 0,
       duration:0.8,
       scrollTrigger: {
-        trigger: "#logo h2",   // element that triggers animation
-        start: "top 100%",  // when top of box hits 80% of viewport
-        end: "bottom 60%", // optional
-        markers: true   ,
+        trigger: "#logo h2",   
+        start: "top 100%",  
+        end: "bottom 60%", 
       }
     });
-         // Project 1: slide from left
-  gsap.from("#project1", {
-    x: -200,
-    opacity: 0,
-    duration: 0.8,
+ 
+gsap.fromTo(
+  "#project1",
+  { y: 80, opacity: 0 },
+  {
+    y: 0,
+    opacity: 1.5,
+    duration: 0.6,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: "#project1",
-      start: "top 80%",
-      end: "bottom 60%",
+      start: "top 85%",
+      end: "bottom 70%",
       toggleActions: "play none none reverse",
-      markers: true, // remove in production
+      // markers: true,
     },
-  });
+  }
+);
 
-  // Project 2: slide from right
-  gsap.from("#project2", {
-    x: 200,
-    opacity: 0,
-    duration: 0.8,
+gsap.fromTo(
+  "#project2",
+  { y:80, opacity: 0 },
+  {
+    y: 0,
+    opacity: 1.5,
+    duration: 0.6,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: "#project2",
-      start: "top 30%",
-      end: "bottom 60%",
+      start: "top 85%",
+      end: "bottom 70%",
       toggleActions: "play none none reverse",
-      markers: true,
     },
-  });
+  }
+);
+
     
   
     var tl=gsap.timeline()
@@ -86,7 +95,7 @@ const App = () => {
     <div id="body">
       <nav>
         <div id='content'>
-          <h1>Portfolio</h1>
+          <h1 id="main">Portfolio</h1>
           <div id='info'>
             <h1><a href='#page4'>Projects</a></h1>
             <h1><a href='#page3'>Skills</a></h1>
@@ -131,13 +140,12 @@ const App = () => {
   Skilled in <span id='fonts'>MongoDB, Express.js, React, Node.js, and Java</span>, I focus on building responsive frontends and scalable backends.  
   Always curious and eager to learn, I enjoy exploring new technologies and refining my craft to create projects that make an impact.  
 </p>
-            <a id="download">Get Resume</a>
+            <a id="download" href='images/piyush.pdf' download={"Piyush_resume.pdf"}>Get Resume</a>
           </div>
 <div id='logo'>
   <h2><a href=""><i className="ri-linkedin-fill"></i></a></h2>
   <h2><a href=""><i className="ri-twitter-x-line"></i></a></h2>
-  <h2><a href=""><i className="ri-github-fill"></i></a></h2>
-  <h2><a href=""><i className="ri-linkedin-fill"></i></a></h2>
+  <h2><a href="https://github.com/piyuswh"><i className="ri-github-fill"></i></a></h2>
 </div>
 
         </div>
@@ -148,14 +156,12 @@ const App = () => {
   <h1>Piyush Saxena</h1>
 </div>
         </div>
-        <div id='scroll'>
           
-        </div>
       </div>
     
       <div id='page3'>
         <div id='left-div3'>
-            <h1>Skills</h1>
+            <h1 style={{color:"white"}}>Skills</h1>
           <div id='skils'>
             <div id='skill1'><img src="images/html.png" alt="HTML" /></div>
             <div id='skill2'><img src="images/css.png" alt="CSS" /></div>
@@ -175,7 +181,7 @@ const App = () => {
       </div>
       <div id='page4'>
         <div id="Projects">
-          <h1>My Projects</h1>
+          <h1>Projects</h1>
           <div id='all'>
 
           <div id='project1'>
@@ -184,19 +190,15 @@ const App = () => {
             <img src="images/we.png" alt="" />
             </div>
             <div id='desc'>
-              <h2>Description</h2>
+              <h2 id='d'>Description</h2>
               <p>Weatherify – A weather app that provides real-time global forecasts using the OpenWeatherMap API, showing temperature, humidity, wind speed, and dynamic backgrounds based on conditions.</p>
-              <h2>Features</h2>
-              <div id='features'>
-              <li>Real-time weather data using REST API integration</li>
-              <li>Search by city name or geolocation</li>
-              </div>
+              
               <h2>Tech Stack:React, API Integration</h2>
             </div>
             <div id='btn-w'>
 
-            <a href=''>Demo</a>
-            <a href="">Github</a>
+            <a href='https://piyuswh.github.io/Weatherify/'>Demo</a>
+            <a href="https://github.com/piyuswh/Weatherify">Github</a>
             </div>
             
           </div>
@@ -207,20 +209,15 @@ const App = () => {
             <img src="images/code.png" alt="" />
             </div>
 <div id='desc'>
-              <h2>Description</h2>
+              <h2 id="d">Description</h2>
                 <p>CodeZone – An interactive MERN-based coding platform to practice, run, and share code in real time, with multi-language support and a modern, animated UI.</p>
-              <h2>Features</h2>
-              <div id='features'>
-              <li>Real-time code compilation and output display</li>
-              <li>Secure backend with Express and MongoDB</li>
-              <li>User authentication & profile management</li>
-              </div>
+            
               <h2>Tech Stack: MERN, Tailwind CSS, GSAP
 </h2>
             </div>
             <div id='btn-c'>
-            <a>Demo</a>
-            <a>Github</a>
+            <a href='https://codezone-1-f38m.onrender.com/'>Demo</a>
+            <a href='https://github.com/piyuswh/CodeZone'>Github</a>
             </div>
               
           </div>
@@ -228,7 +225,14 @@ const App = () => {
         </div>
       </div>
       <div id="page5">
-        <h1>Contact Me</h1>
+        <div id='scroll'> 
+          <div id='scroll-details'>
+            <h1>MERN</h1>
+            <h1>JAVA</h1>
+            <h1>C++</h1>
+          </div>
+        </div>
+        <h1 id='c'>Contact Me</h1>
         <div id='Contact'>
           <div id='form'>
             <form action="">
@@ -241,7 +245,7 @@ const App = () => {
       </div>
       <footer>
         <div id='socials'>
-        <h1><i className="ri-github-fill"></i><a href="">Github</a></h1>
+        <h1><i className="ri-github-fill"></i><a href="https://github.com/piyuswh">Github</a></h1>
         <h1><i className="ri-twitter-x-line"></i><a href="">Twitter</a></h1>
           
         <h1><i className="ri-linkedin-fill"></i><a href="">LinkedIn</a></h1>
