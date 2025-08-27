@@ -101,7 +101,7 @@ gsap.fromTo(
             <h1><a href='#page3'>Skills</a></h1>
             <h1><a href="#page2">About Me</a></h1>
             <h1><a href="#page5">Contact Me</a></h1>
-             <h1 id="menu">☰</h1>
+             <div id="menu"><h1>☰</h1></div>
           </div>
 
         </div>
@@ -163,17 +163,17 @@ gsap.fromTo(
         <div id='left-div3'>
             <h1 style={{color:"white"}}>Skills</h1>
           <div id='skils'>
-            <div id='skill1'><img src="images/html.png" alt="HTML" /></div>
-            <div id='skill2'><img src="images/css.png" alt="CSS" /></div>
-            <div id='skill3'><img src="images/js.png" alt="JS" /></div>
-            <div id='skill4'><img src="images/java.png" alt="JAVA" /></div>
-            <div id='skill5'><img src="images/tail.png" alt="Tailwind" /></div>
-            <div id='skill6'><img src="images/mongo.png" alt="MongoDb" /></div>
-            <div id='skill7'><img src="images/express.png" alt="Express" /></div>
-            <div id='skill8'><img src="images/react.png" alt="React" /></div>
-            <div id='skill9'><img src="images/node.png" alt="Node" /></div>
-            <div id='skill10'><img src="images/c++.png" alt="C++" /></div>
-            <div id='skill11'><img src="images/boot.png" alt="Bootstrap" /></div>
+            <div id='skill2'><img src="images/css.png"  /></div>
+            <div id='skill3'><img src="images/js.png"  /></div>
+            <div id='skill1'><img src="images/html.png" /> </div>
+            <div id='skill4'><img src="images/java.png"  /></div>
+            <div id='skill5'><img src="images/tail.png" /></div>
+            <div id='skill6'><img src="images/mongo.png"  /></div>
+            <div id='skill7'><img src="images/express.png"  /></div>
+            <div id='skill8'><img src="images/react.png"  /></div>
+            <div id='skill9'><img src="images/node.png"  /></div>
+            <div id='skill10'><img src="images/c++.png"  /></div>
+            <div id='skill11'><img src="images/boot.png"  /></div>
           </div>
 
         </div>

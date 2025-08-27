@@ -137,9 +137,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   margin-top:3% ;
   padding:0 15%;
 }
-#info #menu{
-  display: none;
-}
+
 #content{
   display: flex;
   font-size:1vw;
@@ -220,6 +218,9 @@ color: transparent;
   gap: 60px;
   /* font-size: 1.6vw; */
   /* padding:1.4% 1%;/ */
+}
+ #menu {
+  display: none;
 }
  #about{
   /* padding-top: 2%; */
@@ -429,6 +430,41 @@ align-items: center;
   color: white;
   cursor: pointer;
 }
+#skils img {
+  border: 2px solid rgba(0, 255, 150, 0.4);  /* neon greenish border */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);     /* light transparent layer */
+  backdrop-filter: blur(12px) brightness(1.2); 
+  -webkit-backdrop-filter: blur(12px) brightness(1.2);
+  box-shadow: 0 4px 15px rgba(0, 255, 150, 0.2); /* glowing effect */
+  padding: 8px;
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+#skils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#skils div {
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertically center */
+  /* border: 2px solid blue; */
+  width: 150px;
+  height: 19%;
+}
+
+#skils img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
 #form button:hover{
   background: #00f5a0;
   opacity:80%;
@@ -444,6 +480,7 @@ align-items:center;
   padding: 10px 10px;
 }
 @media (max-width:600px) {
+
   body {
   margin: 0;
 background: radial-gradient(circle at top left, #041423 20%, #000000 85%);
@@ -454,13 +491,22 @@ background: radial-gradient(circle at top left, #041423 20%, #000000 85%);
 }
 html {
 scroll-behavior: smooth;
-}#skils img {
+}
+#menu h1{
+  display: block;
+  font-size: 6vw;
+  cursor: pointer;
+}
+#info{
+  display: none;
+}
+#skils img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   border: 2px solid blue;
 }
 
-#skils img:hover {
+#skils div:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -578,7 +624,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   /* border-radius: 20%; */
 }
 #profile #desig{
-  font-size: 4vw;
+  font-size: 5vw;
   white-space: nowrap;;
     box-shadow: 0 8px 5px -5px #00f5a0;  width: 80%;
 
@@ -602,9 +648,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   margin-top:3% ;
   padding:0 15%;
 }
-#info #menu{
-  display: none;
-}
+
 #content{
   display: flex;
   font-size:1vw;
@@ -682,16 +726,9 @@ font-size: xx-large;
 #info h1 a{
   color: #00f5a0;
   text-decoration: none;
-}
-#info{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 60px;
   display: none;
-  /* font-size: 1.6vw; */
-  /* padding:1.4% 1%;/ */
 }
+
  #about{
   /* padding-top: 2%; */
 display: flex;
@@ -766,7 +803,7 @@ border:2px solid rgb(68, 198, 12);
   /* margin: 5% 5%; */
   justify-content: center;
   align-items: center;
-  gap:10%;
+  gap:0%;
   height: 80%;
   
 }
@@ -875,7 +912,7 @@ align-items: center;
     /* border: 2px solid white; */
   }
   #page5 #c{
-  font-size: 5vw;
+  font-size: 8vw;
   text-align: center;
   margin-bottom: 20px;
   font-family:serif;
@@ -901,7 +938,7 @@ align-items: center;
 
 #form input,
 #form textarea {
-  width: 500px;
+  width: 51vw;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -909,7 +946,8 @@ align-items: center;
 }
 
 #form button {
-  font-size: 1.2vw;
+  font-size: 6.2vw;
+  width: 102%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -927,6 +965,7 @@ justify-content:space-evenly;
 align-items:center;
 }
 #socials h1 a{
+  font-size: 5vw;
   color: #00f5a0;
   text-decoration: none;
   padding: 10px 10px;
