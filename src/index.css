@@ -550,16 +550,16 @@ scroll-behavior: smooth;
         gap: 12%;
 }
 #download{
-  font-size: 5vw;
+  font-size: 7vw;
   background-color: #00f5a0;
   /* opacity: 50%; */
   text-decoration: none;
   color: black;
   font-style:normal;
   font-weight: 700;
-  height:6vw;
+  height:9vw;
   text-align: center;
-  width: 30vw;
+  width: 43vw;
   border-radius: 15px;
   white-space: nowrap;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -714,7 +714,7 @@ font-size: xx-large;
   border-radius: 50%;
 }
 #profile img{
-  padding-top: 6%;
+  padding-top: 44%;
   width: 100%;
   height: 60%;
   background-repeat: no-repeat;

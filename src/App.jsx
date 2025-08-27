@@ -23,7 +23,7 @@ const App = () => {
 });
     
         gsap.from("#logo", {
-          y:200,
+          y:80,
       opacity: 0,
       duration:0.8,
       scrollTrigger: {
@@ -143,8 +143,8 @@ gsap.fromTo(
             <a id="download" href='images/piyush.pdf' download={"Piyush_resume.pdf"}>Get Resume</a>
           </div>
 <div id='logo'>
-  <h2><a href=""><i className="ri-linkedin-fill"></i></a></h2>
-  <h2><a href=""><i className="ri-twitter-x-line"></i></a></h2>
+  <h2><a href="https://www.linkedin.com/in/piyush-saxena-86a7322ab/"><i className="ri-linkedin-fill"></i></a></h2>
+  <h2><a href="https://x.com/"><i className="ri-twitter-x-line"></i></a></h2>
   <h2><a href="https://github.com/piyuswh"><i className="ri-github-fill"></i></a></h2>
 </div>
 
@@ -153,7 +153,6 @@ gsap.fromTo(
    
 <div id="profile">
   <img src="images/2.png" alt="" />
-  <h1>Piyush Saxena</h1>
 </div>
         </div>
           
@@ -173,7 +172,6 @@ gsap.fromTo(
             <div id='skill8'><img src="images/react.png"  /></div>
             <div id='skill9'><img src="images/node.png"  /></div>
             <div id='skill10'><img src="images/c++.png"  /></div>
-            <div id='skill11'><img src="images/boot.png"  /></div>
           </div>
 
         </div>
@@ -246,9 +244,9 @@ gsap.fromTo(
       <footer>
         <div id='socials'>
         <h1><i className="ri-github-fill"></i><a href="https://github.com/piyuswh">Github</a></h1>
-        <h1><i className="ri-twitter-x-line"></i><a href="">Twitter</a></h1>
+        <h1><i className="ri-twitter-x-line"></i><a href="https://x.com/">Twitter</a></h1>
           
-        <h1><i className="ri-linkedin-fill"></i><a href="">LinkedIn</a></h1>
+        <h1><i className="ri-linkedin-fill"></i><a href="https">LinkedIn</a></h1>
         </div>
       </footer>
       
